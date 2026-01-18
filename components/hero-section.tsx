@@ -13,7 +13,7 @@ export function HeroSection() {
             <h1 className="text-5xl lg:text-6xl font-bold">
               <span className="text-primary">Bouagba Anassé</span>
               <br />
-              <span className="text-foreground">Obed Jékuthiel</span>
+              <span className="text-foreground">Obed Jékuthinpmel</span>
             </h1>
             <p className="text-lg text-muted-foreground">Webmaster, Cybersécurité & Web Designer</p>
             <p className="text-muted-foreground max-w-md">
@@ -32,7 +32,7 @@ export function HeroSection() {
 
           {/* Center - Photo */}
           <div className="lg:col-span-1 flex justify-center relative">
-            <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
+            <div className="relative w-96 h-[500px] lg:w-[500px] lg:h-[600px]">
               {/* Lime green shape behind */}
               <div
                 className="absolute top-1/4 right-0 w-64 h-64 lg:w-80 lg:h-80 bg-primary rounded-full"
@@ -42,13 +42,14 @@ export function HeroSection() {
               <div className="absolute top-0 left-0 w-48 h-48 lg:w-56 lg:h-56 bg-secondary rounded-full" />
               {/* Profile Image */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-secondary">
+                <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-full border-4 border-secondary overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/images/Obedg.png"
                     alt="Bouagba Anassé Obed Jékuthiel"
-                    width={400}
-                    height={400}
+                    width={700}
+                    height={700}
                     className="w-full h-full object-cover"
+                    style={{ maskImage: "linear-gradient(to bottom, black 50%, transparent 50%)", WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 50%)" }}
                   />
                 </div>
               </div>

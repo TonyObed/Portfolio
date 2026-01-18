@@ -9,7 +9,7 @@ const projects = [
     title: "TaNote",
     description:
       "Conception d'un répétiteur intelligent basé sur l'IA pour élèves et étudiants. Mise en place de l'architecture technique, système de génération de contenu, Design UX/UI.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/tn.png",
     layout: "right",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "GD Immobilier / Urban Style",
     description:
       "Création complète d'un site e-commerce. Développement et mise en production, Optimisation SEO, Création du logo et de la charte graphique, Conception des maquettes UI/UX.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/Urbanst.png",
     layout: "left",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     title: "Logo & Identité Visuelle",
     description:
       "Je crée des identités visuelles cohérentes et professionnelles pour les entreprises et les projets web. Mon objectif est de donner à chaque marque une image claire et reconnaissable.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/81.jpg",
     layout: "right",
   },
 ]
@@ -58,8 +58,8 @@ export function ProjectsSection() {
                     </button>
                   </div>
                   <div className="space-y-4">
-                    <p className="text-primary">{project.category}</p>
-                    <h3 className="text-3xl font-bold text-foreground">{project.title}</h3>
+                    <p className="text-primary text-lg lg:text-xl font-semibold">{project.category}</p>
+                    <h3 className="text-4xl lg:text-5xl font-bold text-foreground">{project.title}</h3>
                     <p className="text-muted-foreground">{project.description}</p>
                     <button className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:border-primary transition-colors group">
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
@@ -69,8 +69,8 @@ export function ProjectsSection() {
               ) : (
                 <>
                   <div className="space-y-4">
-                    <p className="text-primary">{project.category}</p>
-                    <h3 className="text-3xl font-bold text-foreground">{project.title}</h3>
+                    <p className="text-primary text-lg lg:text-xl font-semibold">{project.category}</p>
+                    <h3 className="text-4xl lg:text-5xl font-bold text-foreground">{project.title}</h3>
                     <p className="text-muted-foreground">{project.description}</p>
                     <button className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:border-primary transition-colors group">
                       <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors" />

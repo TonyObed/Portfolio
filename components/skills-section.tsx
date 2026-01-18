@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 const skills = [
-  { name: "WordPress", percentage: 95, icon: "/images/wordpress1.png" },
+  { name: "WordPress", percentage: 95, icon: "/images/WordPress1.png" },
   { name: "React/NextJS", percentage: 85, icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
   { name: "Figma", percentage: 90, icon: "/images/figma.png" },
   { name: "Photoshop", percentage: 88, icon: "/images/adobe-photoshop.png" },
-  { name: "Kali Linux", percentage: 80, icon: "/images/kali.png" },
+  { name: "Kali Linux", percentage: 80, icon: "/images/Kali.png" },
   { name: "Illustrator", percentage: 85, icon: "/images/illu.png" },
-  { name: "NodeJS", percentage: 75, icon: "/images/nodejs-logo.gif" },
+  { name: "NodeJS", percentage: 75, icon: "/images/nodejs-logo.png" },
   { name: "Git/GitHub", percentage: 90, icon: "/images/gitub.jpg" },
 ]
 
@@ -42,12 +42,12 @@ export function SkillsSection() {
                 key={skill.name}
                 className="bg-card border border-border rounded-2xl p-4 flex flex-col items-center text-center"
               >
-                <div className="w-12 h-12 mb-3">
+                <div className={`${skill.name === "Kali Linux" ? "w-16 h-16" : "w-12 h-12"} mb-3`}>
                   <Image
                     src={skill.icon || "/placeholder.svg"}
                     alt={skill.name}
-                    width={48}
-                    height={48}
+                    width={skill.name === "Kali Linux" ? 64 : 48}
+                    height={skill.name === "Kali Linux" ? 64 : 48}
                     className="w-full h-full object-contain"
                   />
                 </div>

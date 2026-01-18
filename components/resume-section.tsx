@@ -1,10 +1,11 @@
 import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 
 const experiences = [
-  { period: "2023 - Présent", title: "Webmaster & Web Designer", company: "Freelance" },
+  { period: "2023 - Présent", title: "Webmaster & Web Designer", company: "Freelance | CDD" },
   { period: "2022 - 2023", title: "Développeur Full-Stack", company: "TaNote" },
-  { period: "2021 - 2022", title: "Stagiaire Cybersécurité", company: "Formation" },
-  { period: "2020 - 2023", title: "Licence Réseaux & Génie Logiciel", company: "Université" },
+  { period: "2021 - 2022", title: "Cybersécurité", company: "Formation Udemy" },
+  { period: "2020 - 2023", title: "Licence Réseaux & Génie Logiciel", company: "Pigier Côte d'Ivoire" },
 ]
 
 export function ResumeSection() {
@@ -15,7 +16,13 @@ export function ResumeSection() {
           {/* Left - Decorative */}
           <div className="flex items-center justify-center">
             <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-secondary flex items-center justify-center">
-              <span className="text-primary text-8xl lg:text-9xl font-bold">✻</span>
+              <Image
+                src="/images/logo-portfichier-201.png"
+                alt="Logo Obed"
+                width={200}
+                height={200}
+                className="w-48 h-48 lg:w-56 lg:h-56 object-contain"
+              />
             </div>
           </div>
 

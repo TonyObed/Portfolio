@@ -13,7 +13,37 @@ export function AboutSection() {
     <section id="about" className="py-24 bg-card">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          {/* Left - Image */}
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden bg-white p-8">
+              <Image
+                src="/images/23.png"
+                alt="Bouagba Anassé Obed"
+                width={350}
+                height={420}
+                className="w-full h-auto object-contain"
+              />
+              {/* Floating Cards */}
+              <div className="absolute top-1/3 left-4 bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-background font-medium text-sm">Web Designer</span>
+                <span className="text-background">↗</span>
+              </div>
+              <div className="absolute bottom-1/4 left-4 bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-background font-medium text-sm">Cybersécurité Expert</span>
+                <span className="text-background">↗</span>
+              </div>
+            </div>
+            {/* Decorative Element */}
+            <div className="absolute top-1/4 right-1/4 text-primary text-2xl">✻</div>
+          </div>
+
+          {/* Right Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground">À Propos de Moi</p>
             <h2 className="text-4xl lg:text-5xl font-bold">
@@ -65,36 +95,6 @@ export function AboutSection() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right - Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="Bouagba Anassé Obed"
-                width={500}
-                height={600}
-                className="w-full h-auto object-cover"
-              />
-              {/* Floating Cards */}
-              <div className="absolute top-1/3 left-4 bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-primary" />
-                </div>
-                <span className="text-background font-medium text-sm">Web Designer</span>
-                <span className="text-background">↗</span>
-              </div>
-              <div className="absolute bottom-1/4 left-4 bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-primary" />
-                </div>
-                <span className="text-background font-medium text-sm">Cybersécurité Expert</span>
-                <span className="text-background">↗</span>
-              </div>
-            </div>
-            {/* Decorative Element */}
-            <div className="absolute top-1/4 right-1/4 text-primary text-2xl">✻</div>
           </div>
         </div>
       </div>
