@@ -10,19 +10,22 @@ import { projects } from "@/lib/projects-data"
 
 const categories = [
   "Show All",
-  "Product Design",
-  "Branding",
+  "Design",
   "Marketing",
-  "Development",
-  "Mobile Apps",
-  "Graphics Design",
+  "Développement",
 ]
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("Show All")
 
   const filteredProjects =
-    activeCategory === "Show All" ? projects : projects.filter((project) => project.category === activeCategory)
+    activeCategory === "Show All"
+      ? projects
+      : activeCategory === "Design"
+        ? projects.filter((project) => ["Product Design", "Branding", "Graphics Design"].includes(project.category))
+        : activeCategory === "Développement"
+          ? projects.filter((project) => ["Development", "Mobile Apps"].includes(project.category))
+          : projects.filter((project) => project.category === activeCategory)
 
   return (
     <main className="min-h-screen bg-background">
@@ -30,13 +33,13 @@ export default function ProjectsPage() {
 
       {/* Page Header */}
       <section className="pt-32 pb-16 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Project Masonry</h1>
+        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Mes Projets</h1>
         <div className="flex items-center justify-center gap-3 text-muted-foreground">
           <Link href="/" className="hover:text-foreground transition-colors">
             Home
           </Link>
           <span>•</span>
-          <span className="text-primary">Project Masonry</span>
+          <span className="text-primary">Mes Projets</span>
         </div>
       </section>
 
